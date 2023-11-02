@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import ProductList from "./views/ProductPage";
 import SingleProduct from "./views/SingleProduct";
 import About from "./views/About";
+import Contact from "./views/Contact";
 import NotFound from "./views/NotFound";
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/products/:id" element={<SingleProduct />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
