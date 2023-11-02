@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <h1>Vogue Valley</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<SingleProduct />} />
