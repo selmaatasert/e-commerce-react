@@ -2,11 +2,24 @@
 
    display: flex;
    flex-direction: column; 
-     
+
+     flex : 2 ;
    min-width: 15rem; 
+
+  button {
+    width: 30%;
+  }
+
+  input {
+    width: 10%;
+  }
 
   .sidebar-categories {
     display: flex;
     flex-direction: column;
+    span:focus {
+        background-color: yellow;
+      }
   }
+
 }
