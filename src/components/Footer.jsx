@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Footer.css'; 
-import visa from '../assets/visa.png'
-import master from '../assets/master.png'
-import paypal from '../assets/PayPal.png'
-import bitcoin from '../assets/Bitcoin.png'
+import '../styles/Footer.css'; 
+import visa from '../components/assets/visa.png'
+import master from '../components/assets/master.png'
+import paypal from '../components/assets/PayPal.png'
+import bitcoin from '../components/assets/Bitcoin.png'
 
 class Footer extends React.Component {
   render () {
