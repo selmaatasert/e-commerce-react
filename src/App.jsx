@@ -30,6 +30,18 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+=======
       <CategoryFilterContext.Provider value={{ categoryFilter, dispatch }}>
         <PriceFilterContext.Provider
           value={{
@@ -55,6 +67,7 @@ function App() {
           </CartContext.Provider>
         </PriceFilterContext.Provider>
       </CategoryFilterContext.Provider>
+>>>>>>> 287407674431998c5692ca1ae153310fbe97ec09
     </>
   );
 }
