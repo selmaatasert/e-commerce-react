@@ -1,7 +1,11 @@
-import React from 'react'
+
+import Product from '../components/Product'
 
 export default function SingleProduct() {
   return (
-    <div>SingleProduct</div>
+    <div>
+        <Product/>
+    </div>
+
   )
 }

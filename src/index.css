@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+  }
+
+  li {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+  @keyframes spinning {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin{
+    font-size: 4rem;
+    animation: spinning 3s infinite;
+    position: absolute ; 
+    left: 50%;
+    top: 50%;
+  }
+  
