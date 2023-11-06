@@ -1,63 +1,63 @@
 /*contact-page styles start*/
-.contact-wrapper{
-    background: url(./components/assets/contact-page-img3.png);
-    background-position: center;
-    background-size: contain;
-    /* background-repeat: round; */
-    width: 100%;
-    height: 30vh;
+.contact-wrapper {
+  background: url(./components/assets/contact-page-img3.png);
+  background-position: center;
+  background-size: contain;
+  /* background-repeat: round; */
+  width: 100%;
+  height: 30vh;
 }
 body {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 .contactHeader {
-    color: rgba(46, 139, 0, 0.503);
+  color: rgba(46, 139, 0, 0.503);
 }
 .contactParagraph {
-    color: rgba(46, 139, 0, 0.503);
+  color: rgba(46, 139, 0, 0.503);
 }
 
 .contact-info map {
-    width: 100%;
+  width: 100%;
 }
 
 .contact-info {
-    background: rgba(239, 250, 239, 0.736);
+  background: rgba(239, 250, 239, 0.736);
 }
 
-.form .card{
-    background: rgba(239, 250, 239, 0.736);
-    border: none;
+.form .ContactCard {
+  background: rgba(239, 250, 239, 0.736);
+  border: none;
 }
 
-label {
-    font-size: 18px;
+.contactLabel {
+  font-size: 18px;
 }
 
-.form button {
-    background: skyblue;
-    padding: 12px 10px;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    color: white;
-    font-size: 18px;
+.form .contactButton {
+  background: skyblue;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: white;
+  font-size: 18px;
 }
 
-.form button:hover {
-    background: transparent;
-    color: black;
-    border: 1px solid blueviolet;
+.form .contactButton:hover {
+  background: transparent;
+  color: black;
+  border: 1px solid blueviolet;
 }
 
 @media (600px <= width <=1050px) {
-    .map {
-       display: none;
-    }
-    .contactInfo {
-        display: grid;
-        place-items: center;
-        margin-right: 360px;
-    }
+  .map {
+    display: none;
+  }
+  .contactInfo {
+    display: grid;
+    place-items: center;
+    margin-right: 360px;
+  }
 }
 
 /*contact-page styles ends*/

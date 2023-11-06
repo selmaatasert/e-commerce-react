@@ -13,7 +13,9 @@ const Contact = () => {
             <div className="text-center mb-3">
               <h1 className="contactHeader">Reach Out to Us</h1>
               <h2></h2>
-              <p className="contactParagraph fs-5">We are only a step away from you</p>
+              <p className="contactParagraph fs-5">
+                We are only a step away from you
+              </p>
             </div>
           </div>
         </div>
@@ -69,10 +71,12 @@ const Contact = () => {
                   </div>
                 </div>
                 <p>
-                We're here to assist you! Feel free to reach out to us through any of the above methods or use the form below.
+                  We're here to assist you! Feel free to reach out to us through
+                  any of the above methods or use the form below.
                 </p>
                 <p>
-                Our team will get back to you as soon as possible. Your inquiries and feedback are important to us.
+                  Our team will get back to you as soon as possible. Your
+                  inquiries and feedback are important to us.
                 </p>
               </div>
             </div>
@@ -84,7 +88,7 @@ const Contact = () => {
         <div className="container-xx1">
           <div className="row">
             <div className="d-flex justify-content-center align-items-center">
-              <div className="card col-8 p-4">
+              <div className="ContactCard col-8 p-4">
                 <div className="text-center mb-3">
                   <h2>Leave Us A Message</h2>
                 </div>
@@ -110,7 +114,9 @@ const Contact = () => {
                 </div>
                 <div className="col-12 d-flex"></div>
                 <div className="p-2 mb-3">
-                  <label className="mb-2">Enter Your Email Address</label>
+                  <label className="contactLabel mb-2">
+                    Enter Your Email Address
+                  </label>
                   <input
                     type="email"
                     className="form-control p-3"
@@ -126,9 +132,13 @@ const Contact = () => {
                     placeholder="Leave a comment here"
                     id="floatingTextarea"
                   ></textarea>
-                  <label for="floatingTextarea">Type in your message</label>
+                  <label className="contactLabel" for="floatingTextarea">
+                    Type in your message
+                  </label>
                 </div>
-                <button className="p-3" type="submit">Submit</button>
+                <button className="contactButton p-3" type="submit">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
