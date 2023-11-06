@@ -1,10 +1,34 @@
 import React from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "bootstrap/dist/css/bootstrap.css";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_me1b9ge",
+        "template_iuuc5c8",
+        form.current,
+        "VBJmtL-syLFfA5juq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <>
       <section className="contact-wrapper p-2">
@@ -92,23 +116,28 @@ const Contact = () => {
                 <div className="text-center mb-3">
                   <h2>Leave Us A Message</h2>
                 </div>
+                <form ref={form} onSubmit={sendEmail}>
                 <div className="col-12 d-flex mb-3">
                   <div className="col-6 p-2">
                     <input
                       type="text"
                       className="form-control p-2"
-                      placeholder="Enter your First Name"
+                      name="user_name"
+                      placeholder="Enter Your First Name"
                       aria-label="Enter your First Name"
                       aria-describedby="basic-addon2"
+                      required
                     />
                   </div>
                   <div className="col-6 p-2">
                     <input
                       type="text"
                       className="form-control p-2"
+                      name="user_name"
                       placeholder="Enter your Second Name"
                       aria-label="Enter your Second Name"
                       aria-describedby="basic-addon2"
+                      required
                     />
                   </div>
                 </div>
@@ -119,15 +148,18 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="user_email"
                     className="form-control p-3"
-                    placeholder="Enter your Your Email"
+                    placeholder="Enter Your Email"
                     aria-label="Enter your Your Email"
                     aria-describedby="basic-addon2"
+                    required
                   />
                 </div>
 
                 <div className="form-floating p-2 mb-4">
                   <textarea
+                    name="message"
                     className="form-control"
                     placeholder="Leave a comment here"
                     id="floatingTextarea"
@@ -136,9 +168,11 @@ const Contact = () => {
                     Type in your message
                   </label>
                 </div>
-                <button type="submit" className="contactButton p-3">
+                <button type="Submit" className="contactButton p-3">
                   Submit
                 </button>
+                </form>
+                
               </div>
             </div>
           </div>
