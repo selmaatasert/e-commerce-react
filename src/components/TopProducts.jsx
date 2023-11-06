@@ -33,7 +33,7 @@ export default function TopProducts() {
           {topProducts.map((product) => (
             <>
               <Link to={`/products/${product.id}`}>
-                <div className="card">
+                <div className="card-topproduct">
                   <div className="product" key={product.id}>
                     <div className="image-container">
                       <img src={product.image} alt={product.title} />

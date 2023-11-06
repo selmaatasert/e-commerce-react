@@ -8,10 +8,11 @@
   }
 }
 
-.card {
+.card-topproduct {
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -29,9 +30,14 @@
 
   .text-container {
     text-align: center;
+    h3 {
+      font-size: 15px;
+      margin-top: 15px;
+      text-overflow: ellipsis;
+    }
   }
 }
-.card:hover {
+.card-topproduct:hover {
   animation: bounce 0.3s;
   top: -25px;
 }

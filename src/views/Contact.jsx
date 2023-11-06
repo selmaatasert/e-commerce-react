@@ -30,7 +30,7 @@ const Contact = () => {
                     width="600px"
                     height="400px"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </map>
               </div>
