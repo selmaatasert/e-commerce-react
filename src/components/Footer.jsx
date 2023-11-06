@@ -11,8 +11,8 @@ class Footer extends React.Component {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h2>Help & Contact</h2>
-          <ul>
+          <h2 className='h2-footer'>Help & Contact</h2>
+          <ul className='ul-footer'
             <li><a href="#">Paying by invoice</a></li>
             <li><a href="#">Track your parcel</a></li>
             <li><a href="#">Report a damaged item</a></li>
@@ -23,8 +23,9 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
-          <h2>Gift Cards</h2>
-          <ul>
+          <h2 className='h2-footer'>Gift Cards</h2>
+          <ul className='ul-footer'>
+
             <li><a href="#">Buy Gift Cards</a></li>
             <li><a href="#">About gift cards and vouchers</a></li>
             <li><a href="#">Redeem a Gift Card</a></li>
@@ -33,8 +34,9 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
-          <h2>About us</h2>
-          <ul>
+          <h2 className='h2-footer'>About us</h2>
+          <ul className='ul-footer'>
+
             <li><a href="#">Visit our corporate site</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Newsroom</a></li>
@@ -43,8 +45,9 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
-          <h2>Our services</h2>
-          <ul>
+
+          <h2 className='h2-footer'>Our services</h2>
+          <ul className='ul-footer'>
             <li><a href="#">Connect your stores</a></li>
             <li><a href="#">Marketing Services</a></li>
             <li><a href="#">Learn more</a></li>
@@ -53,7 +56,8 @@ class Footer extends React.Component {
       </div>
 
       <div className="footer-section">
-        <h2>Our Payment Methods</h2>
+
+        <h2 className='h2-footer'>Our Payment Methods</h2>
         <div className="payment-logos">
           <img src={visa} alt="Visa" width={65} height={40} />
           <img src={master} alt="Mastercard" width={65} height={40}/>
