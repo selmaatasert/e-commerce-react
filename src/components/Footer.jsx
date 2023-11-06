@@ -12,7 +12,7 @@ class Footer extends React.Component {
       <div className="footer-content">
         <div className="footer-section">
           <h2 className='h2-footer'>Help & Contact</h2>
-          <ul className='ul-footer'
+          <ul className='ul-footer'>
             <li><a href="#">Paying by invoice</a></li>
             <li><a href="#">Track your parcel</a></li>
             <li><a href="#">Report a damaged item</a></li>
