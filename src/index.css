@@ -4,6 +4,9 @@
     box-sizing: border-box;
    
   }
+  .header{
+    margin-bottom: 8rem;
+  }
 
   #root {
     display: flex;
