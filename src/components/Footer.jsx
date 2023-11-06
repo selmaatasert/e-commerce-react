@@ -12,7 +12,7 @@ class Footer extends React.Component {
       <div className="footer-content">
         <div className="footer-section">
           <h2 className='h2-footer'>Help & Contact</h2>
-          <ul className='ul-footer'>
+          <ul className='ul-footer'
             <li><a href="#">Paying by invoice</a></li>
             <li><a href="#">Track your parcel</a></li>
             <li><a href="#">Report a damaged item</a></li>
@@ -25,6 +25,7 @@ class Footer extends React.Component {
         <div className="footer-section">
           <h2 className='h2-footer'>Gift Cards</h2>
           <ul className='ul-footer'>
+
             <li><a href="#">Buy Gift Cards</a></li>
             <li><a href="#">About gift cards and vouchers</a></li>
             <li><a href="#">Redeem a Gift Card</a></li>
@@ -35,6 +36,7 @@ class Footer extends React.Component {
         <div className="footer-section">
           <h2 className='h2-footer'>About us</h2>
           <ul className='ul-footer'>
+
             <li><a href="#">Visit our corporate site</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Newsroom</a></li>
@@ -43,6 +45,7 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
+
           <h2 className='h2-footer'>Our services</h2>
           <ul className='ul-footer'>
             <li><a href="#">Connect your stores</a></li>
@@ -53,6 +56,7 @@ class Footer extends React.Component {
       </div>
 
       <div className="footer-section">
+
         <h2 className='h2-footer'>Our Payment Methods</h2>
         <div className="payment-logos">
           <img src={visa} alt="Visa" width={65} height={40} />

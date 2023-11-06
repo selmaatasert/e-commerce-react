@@ -41,7 +41,7 @@ export default function NavBar() {
             </li>
             <li>
               <NavLink  onClick={handleCategoryClick} to="/contact">
-                <span>contact</span>
+                <span>Contact</span>
               </NavLink>
             </li>
           </ul>
