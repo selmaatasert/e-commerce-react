@@ -26,7 +26,7 @@ export default function TopProducts() {
   }, []);
 
   return (
-    <div>
+    <div className="top-container">
       <h2>Top Products</h2>
       <section className="featured-products">
         <div className="product-list">

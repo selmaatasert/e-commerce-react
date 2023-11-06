@@ -1,3 +1,14 @@
+.top-container {
+  margin-top: 500px;
+  //height: 50vh;
+  background-color: rgb(250, 250, 250);
+  padding: 30px;
+
+  h2{
+    padding-top: 10px;
+  }
+}
+
 .product-list {
   display: flex;
   justify-content: center;
@@ -27,6 +38,7 @@
   .image-container {
     text-align: center;
   }
+ 
 
   .text-container {
     text-align: center;
@@ -34,6 +46,7 @@
       font-size: 15px;
       margin-top: 15px;
       text-overflow: ellipsis;
+
     }
   }
 }
