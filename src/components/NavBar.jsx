@@ -4,8 +4,6 @@ import { CategoryFilterContext } from "../context/AppContexts"
 import Cart from "./Cart"
 import "./NavBar.scss"
 
-
-
 export default function NavBar() {
  
  const {dispatch} = useContext(CategoryFilterContext); 
@@ -27,9 +25,8 @@ export default function NavBar() {
                 <li><NavLink onClick={handleCategoryClick} to="/products"><span id ="jewelery">Jewelry</span></NavLink></li>
             </ul>
         </nav>
-        <Cart/>
-        
-    </div>
+        <Cart />
+      </div>
     </>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import ProductList from "./views/ProductPage";
 import SingleProduct from "./views/SingleProduct";
 import About from "./views/About";
+import Contact from "./views/Contact";
 import NotFound from "./views/NotFound";
 import {
   CartContext,
@@ -46,6 +47,8 @@ function App() {
             <Route path="/products" element={<ProductList />} />
             <Route path="/cart"  element={<CartPage/>}/>
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

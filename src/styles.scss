@@ -1,0 +1,45 @@
+.product-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .product {
+    padding: 30px;
+  }
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 15%;
+  position: relative;
+
+  img {
+    max-width: 250px;
+    height: 300px;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
+.card:hover {
+  animation: bounce 0.3s;
+  top: -25px;
+}
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -25px;
+  }
+}
