@@ -30,6 +30,11 @@ export default function NavBar() {
                 <span>Jewelry</span>
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/contact">
+                <span>contact</span>
+              </NavLink>
+            </li>
           </ul>
         </nav>
         <Cart />
