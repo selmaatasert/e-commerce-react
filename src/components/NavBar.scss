@@ -12,18 +12,25 @@
 
   ul {
     display: flex;
-    gap: 1rem;
+    //gap: 1rem;
+    margin-left: -230px;
   }
   a {
-    margin-left: 5rem;
+    margin-left: 3rem;
   }
 
   span {
     color: #000;
+    padding:  10px 15px;
+    border-radius: 15px;
   }
 }
-.header span:hover {
-  font-weight: bold;
-  padding: -1px;
+span:hover {
+  background-color: black;
+  color: antiquewhite;
 }
 
+.nav-header img {
+  height: 170px;
+  margin-left: 100px;
+}
