@@ -136,7 +136,7 @@ const Contact = () => {
                     Type in your message
                   </label>
                 </div>
-                <button className="contactButton p-3" type="submit">
+                <button type="submit" className="contactButton p-3">
                   Submit
                 </button>
               </div>
