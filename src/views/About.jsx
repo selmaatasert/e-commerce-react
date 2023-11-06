@@ -21,6 +21,13 @@ class About extends React.Component {
         <p>
           At our online shop, we value integrity, customer satisfaction, and innovation. We are committed to providing a secure and pleasant shopping environment for all.
         </p>
+        <h2>Our Team</h2>
+        <p>
+          Selma
+          Pavithra 
+          Didier 
+          Illia
+        </p>
       </div>
     );
   }
