@@ -58,22 +58,35 @@ export default function Product() {
     <>
     {loading && <ImSpinner className="spin" />}
     <div className="single-product-container">
-      <div>
+      <div className="single-product-description">
+      <p> {product.description}</p>
+      </div>
+      <div className="img-container">
         <img src={product.image} alt="" />
       </div>
       <div className="single-info">
         <h3>{product.title}</h3>
-        <p>{product.rating?.rate}</p>
-        <p>Price: ${product.price}</p>
-        <p>Category: {product.category}</p>
-        <p> {product.description}</p>
-        <div>
-          <BsDashSquare onClick={handleDecreaseCounter} />
+        <p className="bold">{product.rating?.rate}</p>
+        <p > <span className="bold">Price:</span>€{product.price}</p>
+        <p > <span className="bold">Category:</span>{product.category}</p>
+        
+        <div className="counter-container">
+          <select hidden = {true }name="" id="">
+            <option value="">S</option>
+            <option value="">M</option>
+            <option value="L"></option>
+            <option value="XL"></option>
+          </select>
+          <div className="counter-icon-container">
+          <BsDashSquare className="count-icon" onClick={handleDecreaseCounter} />
           <span>{cartCount.count}</span>
-          <BsPlusSquare onClick={handleIncreaseCounter} />
+          <BsPlusSquare className="count-icon" onClick={handleIncreaseCounter} />
+          </div>
+          <div>
           <p hidden={showWarning}>You cannot add more than 10 items!!</p>
+          </div>
         </div>
-        <Link onClick={handleAddToCart} to="/cart">Add to cart</Link>
+        <Link className="add-cart" onClick={handleAddToCart} to="/cart">Add to Cart</Link>
       </div>
     </div>
     </>

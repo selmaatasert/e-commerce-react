@@ -1,13 +1,102 @@
+.cart-container {
+  margin-top: 4rem;
+  background-color: antiquewhite;
+  flex-wrap: wrap;
+  display: flex;
+  position: relative;
 
-.cart-container{
-    margin-top : 8rem;
 
-    img {
-        max-width: 5rem;
+  .item-container {
+    margin-left: 8rem;
+    flex: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .item-summary {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25rem;
+  }
+
+  img {
+    margin-top: 4rem;
+    max-width: 10rem;
+    mix-blend-mode: multiply;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+
+  p {
+    font-style: italic;
+  }
+
+
+
+  .subtotal {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 14vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 2rem;
+
+
+    .checkout {
+        background-color: black;
+        color: white;
+        margin-bottom: 5rem;
+        text-align: center;
+        max-width: 20rem;
+        padding:10px;  
+        font-style: italic; 
+        
     }
+  }
+  .counter-icon-container {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .count-icon {
+    font-size: 20px;
+  }
+  span {
+    font-size: 20px;
+  }
+}
+.success-and-empty {
+  background-color: antiquewhite;
+  padding-bottom: 4rem;
+}
+.success-msg,
+.empty-cart {
+  margin-top: 8rem;
 }
 
-.success-msg, .empty-cart{
+.success-msg {
+  text-align: center;
+}
 
-    margin-top: 8rem;    
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.continue-shopping {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 1rem;
 }

@@ -6,7 +6,7 @@ export default function Cart() {
   return (
     <div className="cart-icon-container" >
       <Link to= "/cart">
-       <BsCart3/>
+       <BsCart3 className="cart-icon"/>
       </Link>
     
       

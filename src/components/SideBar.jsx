@@ -51,30 +51,30 @@ export default function SideBar() {
         <h4>Categories</h4>
         <div className="sidebar-categories">
           <NavLink onClick={handleCategoryClick} to="/products">
-            <span id="all">All</span>
+            <span className="categories" id="all">All</span>
           </NavLink>
 
           <NavLink onClick={handleCategoryClick} to="/products">
-            <span id="men">Men's Clothing</span>
+            <span className="categories" id="men">Men's Clothing</span>
           </NavLink>
 
           <NavLink onClick={handleCategoryClick} to="/products">
-            <span ref = {womenRef} id="women">Women's Clothing</span>
+            <span ref = {womenRef} className="categories" id="women">Women's Clothing</span>
           </NavLink>
 
           <NavLink onClick={handleCategoryClick} to="/products">
-            <span id="electronics">Electronics</span>
+            <span id="electronics" className="categories">Electronics</span>
           </NavLink>
 
           <NavLink onClick={handleCategoryClick} to="/products">
-            <span id="jewelery">Jewelry</span>
+            <span className="categories" id="jewelery">Jewelry</span>
           </NavLink>
         </div>
 
         <h4>Price</h4>
         <div className="price-filter">
           <label htmlFor="min">min</label>
-          <input
+          <input 
             name="min"
             onChange={handleMinPriceChange}
             type="number"
@@ -88,7 +88,7 @@ export default function SideBar() {
             value={maxPriceFilter === 100000 ? "" : maxPriceFilter}
           />
         </div>
-        <button onClick={handleResetPrice}>Reset Filter</button>
+        <button className="reset-button" onClick={handleResetPrice}>Reset Filter</button>
       </div>
     </>
   );

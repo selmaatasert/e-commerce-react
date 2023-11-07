@@ -7,6 +7,7 @@ import {
 import "./Products.scss";
 import { ImSpinner } from "react-icons/im";
 
+
 export default function Products() {
   const { categoryFilter } = useContext(CategoryFilterContext);
   const { minPriceFilter, maxPriceFilter } = useContext(PriceFilterContext);
@@ -69,6 +70,7 @@ export default function Products() {
 
   return (
     <>
+    
       {loading && <ImSpinner className="spin" />}
       <div className="sorting-and-products">
         <div className="search-and-sorting">
@@ -105,7 +107,7 @@ export default function Products() {
                     <img src={product.image} alt="" />
                     <p>{product.title}</p>
                     <div className="rating-price">
-                      <p>{product.rating.rate}</p>
+                      <p> {product.rating.rate}</p>
                       <p>€{product.price}</p>
                     </div>
                   </div>

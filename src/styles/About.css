@@ -1,15 +1,18 @@
 .about {
     padding: 30px;
     text-align: left;
+    margin-top: 60px;
   }
   
-  h2 {
+  .h2-about {
     font-size: 28px;
     color: #333;
     margin-top: 30px;
   }
   
-  p {
+
+  .p-about {
+
     font-size: 18px;
     margin: 10px 0;
   }

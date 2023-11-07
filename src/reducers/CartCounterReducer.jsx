@@ -12,7 +12,7 @@ export function cartCounterReducer(state, action) {
     }
     case "decrement": {
       let newCount = state.count;
-      if (state.count > 0) {
+      if (state.count > 1) {
         newCount--;
       }
       return {
@@ -23,7 +23,7 @@ export function cartCounterReducer(state, action) {
     case "reset": {
       return {
         ...state,
-        count: 0,
+        count: 1,
       };
     }
     default: {

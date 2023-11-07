@@ -1,18 +1,45 @@
-import React from "react";
+// import React from "react";
+import { useRef } from "react";
+// import emailjs from "@emailjs/browser";
 import "bootstrap/dist/css/bootstrap.css";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_me1b9ge",
+        "template_iuuc5c8",
+        form.current,
+        "VBJmtL-syLFfA5juq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <>
       <section className="contact-wrapper p-2">
         <div className="container-xxl">
           <div className="row">
             <div className="text-center mb-3">
-              <h1>Reach Out to Us</h1>
-              <p className="fs-4">We are only a step away from you</p>
+              <h1 className="contactHeader">Reach Out to Us</h1>
+              <h2></h2>
+              <p className="contactParagraph fs-5">
+                We are only a step away from you
+              </p>
             </div>
           </div>
         </div>
@@ -23,18 +50,18 @@ const Contact = () => {
           <div className="row">
             <div className="container2 d-flex align-items-center justify-content-center">
               <div className="col-8">
-                <map name="">
+                <map name="" className="map">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427314.743289817!2d7.783974962500005!3d53.550188299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18fab7259df4d%3A0xa8dbbb4d5e740b96!2sDCI%20Digital%20Career%20Institute!5e0!3m2!1sen!2sde!4v1699195858305!5m2!1sen!2sde"
                     allowfullscreen=""
                     width="600px"
                     height="400px"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </map>
               </div>
-              <div className="col-6">
+              <div className="contactInfo col-6">
                 <div className="text-start mb-2">
                   <h2>Contact information</h2>
                 </div>
@@ -68,11 +95,12 @@ const Contact = () => {
                   </div>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Tempora nulla voluptas similique, officia repudiandae
-                  blanditiis minus totam, perferendis illo, ea necessitatibus
-                  fuga corporis. Earum, perspiciatis cumque doloribus commodi
-                  fugiat officia!
+                  We're here to assist you! Feel free to reach out to us through
+                  any of the above methods or use the form below.
+                </p>
+                <p>
+                  Our team will get back to you as soon as possible. Your
+                  inquiries and feedback are important to us.
                 </p>
               </div>
             </div>
@@ -84,51 +112,67 @@ const Contact = () => {
         <div className="container-xx1">
           <div className="row">
             <div className="d-flex justify-content-center align-items-center">
-              <div className="card col-8 p-4">
+              <div className="ContactCard col-8 p-4">
                 <div className="text-center mb-3">
                   <h2>Leave Us A Message</h2>
                 </div>
+                <form ref={form} onSubmit={sendEmail}>
                 <div className="col-12 d-flex mb-3">
                   <div className="col-6 p-2">
                     <input
                       type="text"
                       className="form-control p-2"
-                      placeholder="Enter your First Name"
+                      name="user_name"
+                      placeholder="Enter Your First Name"
                       aria-label="Enter your First Name"
                       aria-describedby="basic-addon2"
+                      required
                     />
                   </div>
                   <div className="col-6 p-2">
                     <input
                       type="text"
                       className="form-control p-2"
+                      name="user_name"
                       placeholder="Enter your Second Name"
                       aria-label="Enter your Second Name"
                       aria-describedby="basic-addon2"
+                      required
                     />
                   </div>
                 </div>
                 <div className="col-12 d-flex"></div>
                 <div className="p-2 mb-3">
-                  <label className="mb-2">Enter Your Email Address</label>
+                  <label className="contactLabel mb-2">
+                    Enter Your Email Address
+                  </label>
                   <input
                     type="email"
+                    name="user_email"
                     className="form-control p-3"
-                    placeholder="Enter your Your Email"
+                    placeholder="Enter Your Email"
                     aria-label="Enter your Your Email"
                     aria-describedby="basic-addon2"
+                    required
                   />
                 </div>
 
                 <div className="form-floating p-2 mb-4">
                   <textarea
+                    name="message"
                     className="form-control"
                     placeholder="Leave a comment here"
                     id="floatingTextarea"
                   ></textarea>
-                  <label for="floatingTextarea">Type in your message</label>
+                  <label className="contactLabel" for="floatingTextarea">
+                    Type in your message
+                  </label>
                 </div>
-                <button className="p-3" type="submit">Submit</button>
+                <button type="Submit" className="contactButton p-3">
+                  Submit
+                </button>
+                </form>
+                
               </div>
             </div>
           </div>
