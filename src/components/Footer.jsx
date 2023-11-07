@@ -1,5 +1,8 @@
 import React from 'react';
 import '../styles/Footer.css'; 
+import { Link } from 'react-router-dom';
+import { FaPhone, FaGift, FaBuilding, FaCreditCard } from 'react-icons/fa';
+import { AiOutlineCar } from "react-icons/ai";
 import visa from '../components/assets/visa.png'
 import master from '../components/assets/master.png'
 import paypal from '../components/assets/PayPal.png'
@@ -11,7 +14,7 @@ class Footer extends React.Component {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h2 className='h2-footer'>Help & Contact</h2>
+          <h2 className='h2-footer'><FaPhone />Help & Contact</h2>
           <ul className='ul-footer'>
             <li><a href="#">Paying by invoice</a></li>
             <li><a href="#">Track your parcel</a></li>
@@ -23,7 +26,7 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
-          <h2 className='h2-footer'>Gift Cards</h2>
+          <h2 className='h2-footer'><FaGift />Gift Cards</h2>
           <ul className='ul-footer'>
 
             <li><a href="#">Buy Gift Cards</a></li>
@@ -34,10 +37,9 @@ class Footer extends React.Component {
         </div>
 
         <div className="footer-section">
-          <h2 className='h2-footer'>About us</h2>
+          <h2 className='h2-footer'><FaBuilding />About us</h2>
           <ul className='ul-footer'>
-
-            <li><a href="#">Visit our corporate site</a></li>
+          <Link to="/about">Visit our corporate site</Link>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Newsroom</a></li>
             <li><a href="#">Investor Relations</a></li>
@@ -46,7 +48,7 @@ class Footer extends React.Component {
 
         <div className="footer-section">
 
-          <h2 className='h2-footer'>Our services</h2>
+          <h2 className='h2-footer'><AiOutlineCar />Our services</h2>
           <ul className='ul-footer'>
             <li><a href="#">Connect your stores</a></li>
             <li><a href="#">Marketing Services</a></li>
@@ -57,7 +59,7 @@ class Footer extends React.Component {
 
       <div className="footer-section">
 
-        <h2 className='h2-footer'>Our Payment Methods</h2>
+        <h2 className='h2-footer'><FaCreditCard />Payment Methods</h2>
         <div className="payment-logos">
           <img src={visa} alt="Visa" width={65} height={40} />
           <img src={master} alt="Mastercard" width={65} height={40}/>
