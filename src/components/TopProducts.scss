@@ -9,20 +9,11 @@
   }
 }
 
-.product-list {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  .product {
-    padding: 30px;
-  }
-}
 
 .card-topproduct {
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: auto;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -61,4 +52,10 @@
   100% {
     top: -25px;
   }
+}
+.slick-slide img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 250px;
 }
