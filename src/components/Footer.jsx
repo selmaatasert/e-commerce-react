@@ -33,6 +33,8 @@ class Footer extends React.Component {
             <li><a href="#">About gift cards and vouchers</a></li>
             <li><a href="#">Redeem a Gift Card</a></li>
             <li><a href="#">Corporate Gift Cards</a></li>
+            <li><a href="#">100 day return policy</a></li>
+            <li><a href="#">Corporate discounts</a></li>
           </ul>
         </div>
 
@@ -43,6 +45,8 @@ class Footer extends React.Component {
             <li><a href="#">Careers</a></li>
             <li><a href="#">Newsroom</a></li>
             <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">F.A.Q.</a></li>
+
           </ul>
         </div>
 
@@ -53,6 +57,8 @@ class Footer extends React.Component {
             <li><a href="#">Connect your stores</a></li>
             <li><a href="#">Marketing Services</a></li>
             <li><a href="#">Learn more</a></li>
+            <li><a href="#">Payment options</a></li>
+            <li><a href="#">Free Delivery</a></li>
           </ul>
         </div>
       </div>
