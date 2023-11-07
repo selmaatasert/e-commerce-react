@@ -1,6 +1,6 @@
 // import React from "react";
 import { useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import "bootstrap/dist/css/bootstrap.css";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
