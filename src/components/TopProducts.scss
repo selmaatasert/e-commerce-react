@@ -4,7 +4,7 @@
   background-color: antiquewhite;
   padding: 30px;
 
-  h2{
+  h2 {
     padding-top: 10px;
   }
 }
@@ -38,7 +38,6 @@
   .image-container {
     text-align: center;
   }
- 
 
   .text-container {
     text-align: center;
@@ -46,7 +45,8 @@
       font-size: 15px;
       margin-top: 15px;
       text-overflow: ellipsis;
-
+      text-decoration: none;
+      color: black;
     }
   }
 }
