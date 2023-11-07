@@ -1,6 +1,6 @@
 import Products from '../components/Products'
 import SideBar from '../components/SideBar'
-import "./ProductPage.scss"
+import "../styles/ProductPage.scss"
 
 export default function ProductList() {
   return (

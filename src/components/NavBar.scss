@@ -19,13 +19,13 @@
     margin-left: 3rem;
   }
 
-  span {
+  .nav-span {
     color: #000;
     padding:  10px 15px;
     border-radius: 15px;
   }
 }
-span:hover {
+.nav-span:hover {
   background-color: black;
   color: antiquewhite;
 }

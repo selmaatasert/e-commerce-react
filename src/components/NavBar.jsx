@@ -23,27 +23,27 @@ export default function NavBar() {
           <ul>
             <li>
               <NavLink onClick={handleCategoryClick} to="/products">
-                <span id="men">Men</span>
+                <span className="nav-span" id="men">Men</span>
               </NavLink>
             </li>
             <li>
               <NavLink onClick={handleCategoryClick} to="/products">
-                <span id="women">Women</span>
+                <span className="nav-span" id="women">Women</span>
               </NavLink>
             </li>
             <li>
               <NavLink onClick={handleCategoryClick} to="/products">
-                <span id="electronics">Electronics</span>
+                <span className="nav-span" id="electronics">Electronics</span>
               </NavLink>
             </li>
             <li>
               <NavLink onClick={handleCategoryClick} to="/products">
-                <span id="jewelery">Jewelry</span>
+                <span  className="nav-span" id="jewelery">Jewelry</span>
               </NavLink>
             </li>
             <li>
               <NavLink onClick={handleCategoryClick} to="/contact">
-                <span>Contact</span>
+                <span className="nav-span">Contact</span>
               </NavLink>
             </li>
           </ul>
