@@ -8,8 +8,7 @@ export default function Cart() {
       <Link to= "/cart">
        <BsCart3 className="cart-icon"/>
       </Link>
-    
-      
+    <div className="nav-cart-count">0</div>
     </div>
   )
 }
