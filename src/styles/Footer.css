@@ -38,7 +38,8 @@
   
 
   .h2-footer {
-    margin-left: 15px;
+    margin-left: 0;
+    font-size: 26px;
   }
   
   @media (max-width: 768px) {
