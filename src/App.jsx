@@ -10,6 +10,7 @@ import NotFound from "./views/NotFound";
 import {
   CartContext,
   CategoryFilterContext,
+  LoginContext,
   PriceFilterContext,
 } from "./context/AppContexts";
 import "./App.css";
@@ -18,6 +19,8 @@ import { categoryFilterReducer } from "./reducers/CategoryFilterReducer";
 import { cartCounterReducer } from "./reducers/CartCounterReducer";
 import CartPage from "./views/CartPage";
 import { addToCartReducer } from "./reducers/AddToCartReducer";
+import { loginReducer } from "./reducers/LoginReducer";
+import LoginPage from "./views/LoginPage";
 
 function App() {
   const [categoryFilter, dispatch] = useReducer(categoryFilterReducer, {
@@ -29,36 +32,40 @@ function App() {
     count: 0,
   });
   const [cart, dispatchCart] = useReducer(addToCartReducer, []);
+  const [login, dispatchLogin] = useReducer(loginReducer, { loggedIn: false, token: "" });
 
   return (
     <>
-      <CategoryFilterContext.Provider value={{ categoryFilter, dispatch }}>
-        <PriceFilterContext.Provider
-          value={{
-            minPriceFilter,
-            setMinPriceFilter,
-            maxPriceFilter,
-            setMaxPriceFilter,
-          }}
-        >
-          <CartContext.Provider
-            value={{ cartCount, dispatchCartCount, cart, dispatchCart }}
+      <LoginContext.Provider value={{ login, dispatchLogin }}>
+        <CategoryFilterContext.Provider value={{ categoryFilter, dispatch }}>
+          <PriceFilterContext.Provider
+            value={{
+              minPriceFilter,
+              setMinPriceFilter,
+              maxPriceFilter,
+              setMaxPriceFilter,
+            }}
           >
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products/:id" element={<SingleProduct />} />
-              <Route path="/products" element={<ProductList />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+            <CartContext.Provider
+              value={{ cartCount, dispatchCartCount, cart, dispatchCart }}
+            >
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Home />}  />
+                <Route path="/products/:id" element={<SingleProduct />} />
+                <Route path="/products" element={<ProductList />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<LoginPage />} />
 
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer />
-          </CartContext.Provider>
-        </PriceFilterContext.Provider>
-      </CategoryFilterContext.Provider>
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              <Footer />
+            </CartContext.Provider>
+          </PriceFilterContext.Provider>
+        </CategoryFilterContext.Provider>
+      </LoginContext.Provider>
     </>
   );
 }

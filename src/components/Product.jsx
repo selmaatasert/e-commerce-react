@@ -5,6 +5,9 @@ import { BsPlusSquare } from "react-icons/bs";
 import { BsDashSquare } from "react-icons/bs";
 import { CartContext } from "../context/AppContexts";
 import { ImSpinner } from "react-icons/im";
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 export default function Product() {
   const [product, setProduct] = useState({});
@@ -67,16 +70,16 @@ export default function Product() {
       <div className="single-info">
         <h3>{product.title}</h3>
         <p className="bold">{product.rating?.rate}</p>
+        <Rating
+      style={{ maxWidth: 100 }}
+      value={product.rating?.rate}
+      readOnly
+    />
         <p > <span className="bold">Price:</span>€{product.price}</p>
         <p > <span className="bold">Category:</span>{product.category}</p>
         
         <div className="counter-container">
-          <select hidden = {true }name="" id="">
-            <option value="">S</option>
-            <option value="">M</option>
-            <option value="L"></option>
-            <option value="XL"></option>
-          </select>
+          
           <div className="counter-icon-container">
           <BsDashSquare className="count-icon" onClick={handleDecreaseCounter} />
           <span>{cartCount.count}</span>

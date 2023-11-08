@@ -49,11 +49,32 @@
 
 .menu-toggle.open .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+.login-and-cart {
+
+  display: flex;
+  flex-direction: row;
+  margin-right: 0.2rem;
+}
+
+@media (max-width: 1200px) {
+  .nav-header {
+    margin-left: 0;
+  }
+  .cart-icon-container {
+    margin-right: 2rem;
+  }
 }
 
 @media (max-width: 900px) {
   .menu-toggle {
     display: flex;
+  }
+
+  .nav-header {
+    margin-left: 0;
   }
 
   .header-nav {
@@ -79,4 +100,7 @@
   .nav-span {
     margin: 5px 0;
   }
+
+  
 }
+

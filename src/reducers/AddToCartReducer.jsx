@@ -1,33 +1,48 @@
 export function addToCartReducer(state, action) {
+
   if (action.type === "increment") {
 
+    const index = state.findIndex(({ id }) => id === action.id);
 
-    const cartItem = state.find(({ id }) => id === action.id);
-    const newArr = state.filter((cartItem) => cartItem.id !== action.id);
-    console.log(newArr);
-    cartItem.count = cartItem.count + 1;
-    newArr.push(cartItem);
-    return newArr;
+    state[index].count++;
+
+    return [].concat(state);
+
   } else if (action.type === "decrement") {
 
+    const index = state.findIndex(({ id }) => id === action.id);
+   
+    if (state[index].count < 2) {
 
-    const cartItem = state.find(({ id }) => id === action.id);
-    let newArr = state.filter((cartItem) => cartItem.id !== action.id);
-    cartItem.count = cartItem.count - 1;
-    if (cartItem.count < 1) {
-      return newArr;
+      state.splice(index, 1)
+
+      return [].concat(state)
+
     } else {
-      newArr.push(cartItem);
-      return newArr;
-    }
-  } else if (action.type === "add") {
 
-    const newItem = { id: action.id, count: action.count, product: action.product };
+      state[index].count --
+      return [].concat(state);
+    }
+
+  } else if (action.type === "add") {
+    const newItem = {
+      id: action.id,
+      count: action.count,
+      product: action.product,
+    };
     const newArr = state.slice();
-    newArr.push(newItem);
+    const index = newArr.findIndex((item)=> item.id === action.id  )
+    if (index === -1)  {
+      newArr.push(newItem);
+
+    } else {
+      newArr[index].count += action.count ;
+      if (newArr[index].count >10) {
+        newArr[index].count = 10;
+      }
+    }
     return newArr;
   } else if (action.type === "reset") {
-
     return [];
   } else console.log("this action is not supported");
 }
