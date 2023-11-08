@@ -6,6 +6,9 @@ import {
 } from "../context/AppContexts";
 import "./Products.scss";
 import { ImSpinner } from "react-icons/im";
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 
 export default function Products() {
@@ -75,7 +78,7 @@ export default function Products() {
       <div className="sorting-and-products">
         <div className="search-and-sorting">
           <div className="search">
-            <label htmlFor="find">Search:</label>
+            <label className="search-label" htmlFor="find">Search:</label>
             <input type="text" name="find" onChange={handleSearch}/>
           </div>
           <div className="sort">
@@ -108,6 +111,11 @@ export default function Products() {
                     <p>{product.title}</p>
                     <div className="rating-price">
                       <p> {product.rating.rate}</p>
+                      <Rating
+      style={{ maxWidth: 100 }}
+      value={product.rating.rate}
+      readOnly
+    />
                       <p>€{product.price}</p>
                     </div>
                   </div>
