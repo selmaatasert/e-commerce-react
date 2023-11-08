@@ -45,7 +45,7 @@ export default function TopProducts() {
         settings: {
           slidesToShow: 3,
         },
-      }
+      },
     ],
   };
 
@@ -58,10 +58,10 @@ export default function TopProducts() {
         {topProducts.map((product) => (
           <Link to={`/products/${product.id}`} key={product.id}>
             <div className="card-topproduct">
-                <img src={product.image} alt={product.title} />
-              {/* <div className="text-container">
+              <img src={product.image} alt={product.title} />
+              <div className="text-container">
                 <h3>{product.title}</h3>
-              </div> */}
+              </div>
             </div>
           </Link>
         ))}
