@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import '../styles/Contact.css';
 
 const Contact = () => {
   const form = useRef();
@@ -31,7 +32,7 @@ const Contact = () => {
   };
   return (
     <>
-      <section className="contact-wrapper p-2">
+      <section className="ContactSection1 contact-wrapper p-2">
         <div className="container-xxl">
           <div className="row">
             <div className="text-center mb-3">
@@ -71,7 +72,7 @@ const Contact = () => {
                   </p>
                   <p className="mb-3">
                     <b>Phone:</b>{" "}
-                    <a href="tel:015426254258"> Call Us +015426254258</a>
+                    <a href="tel:015426254258"> Call Us +495426254258</a>
                   </p>
                   <p className="mb-5">
                     <b>Hours Open:</b> From 8 A.m to 5 P.m
