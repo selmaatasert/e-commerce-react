@@ -12,7 +12,7 @@ class Footer extends React.Component {
   render () {
     return (  
     <footer className="footer">
-      <div className="footer-content">
+      <div className="footer-content" id="footer-color">
         <div className="footer-section">
           <h2 className='h2-footer'><FaPhone />Help & Contact</h2>
           <ul className='ul-footer'>
