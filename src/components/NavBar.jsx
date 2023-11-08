@@ -1,15 +1,16 @@
 import { useContext, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { CategoryFilterContext } from "../context/AppContexts";
+import { CategoryFilterContext, LoginContext } from "../context/AppContexts";
 import Cart from "./Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons"; 
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.scss";
 import Logo from "./assets/3.png";
 
 export default function NavBar() {
   const { dispatch } = useContext(CategoryFilterContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const {login, dispatchLogin} = useContext(LoginContext)
 
   const handleCategoryClick = (e) => {
     dispatch({ type: e.target.id });
@@ -18,6 +19,10 @@ export default function NavBar() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleSignOut = () => {
+    dispatchLogin({type: "loggedOut"})
+  } 
 
   return (
     <>
@@ -67,7 +72,16 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
+        <div className="login-and-cart">
+      { !login.loggedIn ? 
+        <Link to="/login">
+          <span className="nav-span">Sign In</span>
+        </Link> :
+        <Link onClick={handleSignOut} to="/">
+          <span className="nav-span">Sign Out</span>
+        </Link> }
         <Cart />
+        </div>
       </div>
     </>
   );

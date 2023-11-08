@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { CartContext, CategoryFilterContext } from "../context/AppContexts";
+import { Link, useNavigate} from "react-router-dom";
+import { CartContext, CategoryFilterContext, LoginContext } from "../context/AppContexts";
 import { BsPlusSquare } from "react-icons/bs";
 import { BsDashSquare } from "react-icons/bs";
 import "./CartSummary.scss";
@@ -8,8 +8,10 @@ import "./CartSummary.scss";
 export default function CartSummary() {
   const { dispatch } = useContext(CategoryFilterContext);
   const { cart, dispatchCart } = useContext(CartContext);
+  const {login} = useContext(LoginContext)
   const [showWarning, setShowWarning] = useState(true);
   const [showSuccess, setShowSuccess] = useState(true);
+  const navigate = useNavigate()
 
   const handleDecreaseCounter = (id) => {
     dispatchCart({ type: "decrement", id: id });
@@ -32,9 +34,13 @@ export default function CartSummary() {
   }, [showWarning]);
 
   const handleCheckOut = () => {
+    if (login.loggedIn) {
     dispatchCart({ type: "reset" });
-    setShowSuccess(false);
-  };
+    setShowSuccess(false); 
+  } else {
+        navigate("/login")
+    }
+  } ;
 
   const handleCategoryClick = () => {
     dispatch({ type: "all" });
@@ -88,7 +94,7 @@ export default function CartSummary() {
               .toFixed(2)}
           </p>
           <p hidden={showWarning}>You cannot add more than 10 items!!</p>
-          <button className="checkout" onClick={handleCheckOut}>Checkout</button>
+          <button className="checkout" onClick={handleCheckOut}> { login.loggedIn ? "Checkout" : "Please Sign In"}</button>
         </div>
       </div>
       </div>

@@ -1,0 +1,37 @@
+ .login-container{
+    margin-top: 8rem;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+
+    .warning {
+        margin-top: 1rem;
+        color: red;
+        font-size: 1rem;
+    }
+ }
+
+  
+   
+ .login-form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+  
+    .login-button {
+        margin-top: 3rem;
+    }
+
+ }
+
+ 
+ .sign-out-container{
+    margin-top: 8rem;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    .logout-button {
+        margin-top: 4rem;
+     }
+ }
+
